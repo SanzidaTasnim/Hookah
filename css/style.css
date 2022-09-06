@@ -1,0 +1,1157 @@
+body,
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.tittle {
+    text-align: center;
+    margin-bottom: 35px;
+    z-index: 5;
+    position: relative;
+}
+
+.tittle h4 {
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.tittle img {
+    max-width: 100%;
+}
+
+/* =====================  =====================  
+                    pulse hover
+ =====================  =====================   */
+
+.pulsing:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    box-shadow: inset 0 0 0 3px #FFF;
+    transition: transform 0.2s, opacity 0.2s;
+    animation: pulsing 2.7s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* =====================  =====================  
+                    pulse hover
+ =====================  =====================   */
+
+
+
+/* ==========================================  
+                    Nav Start
+ ==========================================   */
+
+.navbar {
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul li .nav-link {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: transparent;
+    margin: 0 12px;
+    padding: 30px 15px 25px;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li .nav-link::after {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    content: "";
+    border-bottom: 3px solid #ed5034;
+    z-index: -1;
+    transition: .5s;
+}
+
+nav ul li .nav-link:hover {
+    color: #ed5034;
+}
+
+nav ul li .nav-link:hover::after {
+    top: 0;
+}
+
+nav ul li .active::after {
+    top: 0;
+}
+
+nav ul li .active {
+    top: 0;
+    color: #ed5034;
+}
+
+
+/* ==========================================  
+                    Nav end
+ ==========================================   */
+
+
+/* ==========================================  
+                    Banner start
+ ==========================================   */
+
+#banner .slide_item {
+    background: url(../images/Banner-1.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+#banner .slide_item2 {
+    background: url(../images/Banner-2.png) no-repeat center;
+    background-size: cover;
+}
+
+#banner .smoke_overlay {
+    background: url(../images/banner-1-smoke.png) no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+#banner .smoke_overlay {
+    background: url(../images/banner-1-smoke.png) no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+#banner .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    padding: 235px 0 280px;
+    text-align: center;
+}
+
+#banner .slide_item h4 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#banner .slide_item h2 {
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+    font-size: 72px;
+    font-weight: 400;
+    margin: 30px 0 15px;
+}
+
+#banner .slide_item h2 span {
+    display: block;
+}
+
+#banner .slide_item p {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 100;
+    font-family: 'Montserrat Alternates', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+#banner .slide_item p::before {
+    width: 100px;
+    height: 2px;
+    background: #ed5034;
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    content: "";
+}
+
+#banner .slide_item p::after {
+    width: 100px;
+    height: 2px;
+    background: #ed5034;
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    content: "";
+}
+
+#banner .contact_banner .overlay {
+    padding-bottom: 60px;
+}
+
+#banner .banner_slider .slid_arrow {
+    position: absolute;
+    bottom: 60px;
+    color: #fff;
+    z-index: 9;
+    font-size: 28px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#banner .banner_slider .left {
+    left: 43%;
+}
+
+#banner .banner_slider .right {
+    right: 43%;
+}
+
+#banner .banner_slider .slid_arrow:hover {
+    background: #fff;
+    color: #ed5034;
+}
+
+
+/* --------- Story page banner */
+#about_page #banner .slide_item .overlay {
+    padding-bottom: 150px;
+}
+
+#about_page #banner .slide_item p {
+    position: static;
+}
+
+/* --------- Story page banner */
+
+
+
+/* --------- gallery_page banner */
+
+#gallery_page #banner .overlay {
+    padding-bottom: 140px;
+}
+
+#gallery_page #banner .slide_item p {
+    position: static;
+}
+
+/* --------- gallery_page banner */
+
+
+/* --------- contact page banner */
+
+#banner .contact_banner {
+    background: url(../images/contact_banner.png) no-repeat center;
+    background-size: cover;
+}
+
+#banner .contact_banner h2 {
+    font-size: 42px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 30px;
+}
+
+#banner .contact_banner p {
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+#banner .contact_banner p::after {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+#banner .explore_btn {
+    width: 230px;
+    margin-top: 40px;
+    margin-bottom: 130px;
+}
+
+#banner .counter_down {
+    color: #fff;
+    padding: 0;
+}
+
+#banner .counter_down h5 {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Yeseva One', cursive;
+}
+
+#banner .counter_down p {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#banner .counter_down p::after {
+    display: none;
+}
+
+#banner .counter_down .count {
+    width: 100px;
+    margin: 0 35px
+}
+
+/* --------- contact page banner */
+
+
+/* ==========================================  
+                    Banner end
+ ==========================================   */
+
+
+/* ==========================================  
+                   our story start
+ ==========================================   */
+
+#our_story {
+    background: url(../images/story_bg.png) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+#our_story .row {
+    position: relative;
+    z-index: 9;
+}
+
+#our_story .tittle {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#our_story .story_img {
+    position: relative;
+}
+
+#our_story .story_img .katle {
+    width: 100%;
+    z-index: 5;
+    position: relative;
+}
+
+#our_story .story_img .img {
+    position: relative;
+}
+
+#our_story .play {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    font-size: 25px;
+    color: #ed5034;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+}
+
+#our_story .story_img .smoke {
+    position: absolute;
+    left: -156px;
+    bottom: 40px;
+}
+
+#our_story .story_img .smokeindex {
+    z-index: 11;
+    left: -80px;
+}
+
+
+#our_story .details {
+    padding-top: 50px;
+}
+
+#our_story .details p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.explore_btn {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Yeseva One', cursive;
+    color: #ed5034;
+    border: 1px solid #2f3132;
+    background: url(../images/button_bg.png) no-repeat center;
+    border-radius: 29px;
+    margin-top: 65px;
+    position: relative;
+    z-index: 99;
+    width: 195px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0px 10px 100px 0px rgba(255, 255, 255, .15);
+    background-size: cover;
+}
+
+.explore_btn:hover {
+    color: #d43215dc;
+}
+
+
+/* ------------- StoryPage  */
+
+#about_page #our_story .bottom_img {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#about_page #our_story .bottom_img .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_page #our_story .bottom_img .img .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+}
+
+#about_page #our_story .overlay .play {
+    width: 55px;
+    height: 55px;
+    font-size: 15px;
+    line-height: 55px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#about_page #our_story .bottom_img .img:hover .overlay {
+    opacity: 1;
+}
+
+/* ------------- StoryPage  */
+
+/* ==========================================  
+                   our story end
+ ==========================================   */
+
+
+
+
+/* ==========================================  
+                   counter-up start
+ ==========================================   */
+
+#counter_up {
+    background: #040405;
+}
+
+#counter_up .counter_bg {
+    background: url(../images/counter_up-bg.png)no-repeat center;
+    background-size: cover;
+    padding: 65px 0;
+}
+
+#counter_up .counter_bg .item {
+    text-align: center;
+}
+
+#counter_up .counter_bg .item h4 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+}
+
+#counter_up .counter_bg .item p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* ==========================================  
+                   counter-up end
+ ==========================================   */
+
+
+
+
+/* ==========================================  
+                happy_hour Start
+ ==========================================   */
+
+#happy_hour {
+    background: #000;
+    padding: 60px 0;
+    position: relative;
+}
+
+#happy_hour .row {
+    justify-content: center;
+    z-index: 5;
+    position: relative;
+}
+
+.counter_down {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-family: 'Yeseva One', cursive;
+    color: #fff;
+    padding-right: 55px;
+}
+
+#happy_hour .counter {
+    width: 150px;
+    height: 150px;
+    background: url(../images/counter_bg.png) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    text-align: center;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 10px 100px 0px rgba(255, 255, 255, .15);
+    border: 1px solid #292929;
+}
+
+.counter h4 {
+    font-size: 60px;
+    width: 100%;
+    margin-bottom: -65px;
+}
+
+#happy_hour .counter p {
+    font-size: 20px;
+}
+
+#happy_hour h3 {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+#happy_hour .hour_text {
+    margin-top: 15px;
+    padding-left: 90px;
+    border-left: 1px solid #282727;
+}
+
+#happy_hour .hour_text .schedule {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#happy_hour .hour_text h4 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+#happy_hour .hour_text p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#happy_hour .left_images {
+    opacity: .2;
+    position: absolute;
+    right: -100px;
+    top: -235px;
+}
+
+#happy_hour .leftbig {
+    opacity: .1;
+    top: -400px;
+}
+
+
+/* ==========================================  
+                happy_hour end
+ ==========================================   */
+
+
+/* ==========================================  
+               Our Team Start
+ ==========================================   */
+
+#our_team {
+    background: url(../images/smokely_bg.png) no-repeat center;
+    background-size: cover;
+    padding: 20px 0 100px;
+}
+
+#our_team .item {
+    text-align: center;
+    position: relative;
+    padding-top: 120px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff;
+    font-weight: 100;
+}
+
+#our_team .item .member img {
+    width: 100%;
+}
+
+#our_team .item .member {
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 5;
+    position: relative;
+}
+
+#our_team .item .smoke {
+    position: absolute;
+    top: -100px;
+    left: -30px;
+    opacity: 0;
+    transition: .5s;
+}
+
+#our_team .item:hover .smoke {
+    opacity: 1;
+}
+
+#our_team .item h4 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    position: relative;
+    z-index: 5;
+}
+
+#our_team .item p {
+    font-size: 18px;
+    position: relative;
+    z-index: 5;
+}
+
+#our_team .slick-dots {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+#our_team .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#our_team .slick-dots li button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    transition: .3s;
+    background: #fff;
+}
+
+#our_team .slick-dots .slick-active button {
+    width: 16px;
+    height: 16px;
+    background: #ed5034;
+}
+
+#our_team .tittle {
+    margin-bottom: 0;
+    transform: translateY(100%);
+    position: relative;
+    z-index: 9;
+}
+
+
+/* ==========================================  
+               Our Team end
+ ==========================================   */
+
+
+/* ==========================================  
+               gallery Start
+ ==========================================   */
+
+#gallery {
+    background: url(../images/smokely_bg.png);
+    padding: 60px 0;
+    text-align: center;
+}
+
+#gallery .slide_item {
+    position: relative;
+    margin: 0 15px;
+}
+
+#gallery .slide_item img {
+    width: 100%;
+    opacity: .5;
+    transition: .5s;
+}
+
+#gallery .slide_item .icon {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: .5s;
+    opacity: 0;
+}
+
+#gallery .slide_item:hover img {
+    opacity: 1;
+}
+
+#gallery .slide_item:hover .icon {
+    opacity: 1;
+    right: 10px;
+    bottom: 10px;
+}
+
+#gallery .explore_btn {
+    text-align: center;
+}
+
+/* ---------- gallery page */
+#gallery .gallery_body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#gallery .gallery_body .item {
+    width: 18%;
+    margin: 15px;
+}
+
+/* ---------- gallery page */
+
+
+/* ==========================================  
+               gallery end
+ ==========================================   */
+
+
+/* ==========================================  
+               Fill form Start
+ ==========================================   */
+
+
+#fill_form {
+    background: url(../images/form_bg.png) no-repeat center;
+    background-size: cover;
+    padding: 50px 0 100px;
+}
+
+#fill_form .item_img {
+    position: relative;
+}
+
+#fill_form .item_img .img {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+#fill_form .item_img .smoke {
+    position: absolute;
+    left: -120px;
+    top: 70px;
+}
+
+#fill_form .form .tittle {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#fill_form .filling_form {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#fill_form .filling_form .item {
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#fill_form .filling_form .select_item {
+    width: 32%;
+    margin-bottom: 2%;
+    color: #ffffff96;
+}
+
+#fill_form .filling_form textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+#fill_form .filling_form .item,
+.select_item,
+textarea {
+    padding: 20px;
+    background: transparent;
+    border: 1px solid #232323;
+    color: #fff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#fill_form .filling_form .explore_btn {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 40px;
+}
+
+
+/* ==========================================  
+               Fill form Start
+ ==========================================   */
+
+
+
+/* ==========================================  
+               Our Team Start
+ ==========================================   */
+
+#testimonial {
+    background: #050505;
+    padding: 60px 0;
+}
+
+#testimonial .slide_item {
+    width: 770px;
+    background: #0a0b0c;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+}
+
+#testimonial .slide_item .img {
+    width: 32%;
+}
+
+#testimonial .slide_item .img img {
+    width: 100%;
+}
+
+#testimonial .slide_item .text {
+    padding: 25px 30px 30px 30px;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#testimonial .slide_item .text p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#testimonial .slide_item .text h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#testimonial .slide_item .text i {
+    color: #ed5034;
+}
+
+#testimonial .slid_arrow {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: red;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#testimonial .left {
+    left: 265px;
+}
+
+#testimonial .right {
+    right: 215px;
+}
+
+
+/* ==========================================  
+               Our Team end
+ ==========================================   */
+
+
+
+/* ==========================================  
+               footer start
+ ==========================================   */
+
+
+footer {
+    background: url(../images/footer_bg.png) no-repeat center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+footer .item {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+footer .bottom_border {
+    border-bottom: 1px solid #222;
+}
+
+footer .item h4 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+}
+
+footer .item p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+footer .social_icon {
+    text-align: center;
+    transform: translateY(-30%);
+}
+
+footer .social_icon a i {
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    color: #ed5034;
+    background: #fff;
+    margin: 0 10px;
+    transition: .5s;
+}
+
+footer .social_icon a i:hover {
+    color: #fff;
+    background: #ed5034;
+    transform: translateY(-7px);
+}
+
+footer .social_icon p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: 20px;
+}
+
+/* ==========================================  
+               footer end
+ ==========================================   */
+
+
+
+
+
+
+
+
+/* ==========================================  
+               preloader css
+ ==========================================   */
+
+
+/*PRELOADING------------ */
+#overlayer {
+    width: 100%;
+    height: 100vmax;
+    position: absolute;
+    z-index: 9999;
+    background: #202020;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    position: absolute;
+    z-index: 9999;
+    border: 2px solid #Fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(216, 216, 216);
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+/* ==========================================  
+               preloader css
+ ==========================================   */
